@@ -1,0 +1,187 @@
+@import "layout";
+// @import "debugColor";
+@import "variables";
+
+.containerMain {
+    width: 100%;
+    max-width:100%;
+    .littleAside{
+        @include bgcolor($colorPrima,$fontColSec);
+        text-align: center;
+        ul{
+            li{
+                padding: 25% 0%;
+
+            }
+        }
+
+    }
+    .mainSection {
+        width: 80%;
+        max-width: 100%;
+        box-sizing: border-box;
+        .headerBottom {
+            .headerAside{
+                @include bgcolor($colorSec,$fontColSec);
+                .bottomHeaderAside{
+                    @include bgcolor($fontColSec,$colorSec);
+                    button{
+                        color: $colorSec
+                    }
+                    #collapseOne{
+                        i{
+                            font-size: 3rem;
+                        }
+                    }
+                    a{
+                        @include bgcolor($fontColSec,$colorSec);
+                    }
+                }
+            }
+            .mainHeader{
+                .headerBannier{
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 0 1%;
+                    @include bgcolor(lightgrey,$colorSec);
+                    ul{
+                        // display: flex;
+                        // justify-content: space-around;
+                        margin: 0;
+                        a{
+                            @include bgcolor(lightgrey,$colorSec);
+                            // margin: 0 2%;
+                        }
+
+                        li{
+                            margin: 0 1rem;
+                            display: inline-block;
+                        }
+                    }
+                    #ulLetter{
+                        text-align: end;
+                    }
+                }
+
+                .headerNav {
+                    ul {
+
+                        list-style: none;
+                        padding: 0;
+                        margin: 0;
+                        li{
+                            text-align: center;
+                            width: 100%;
+                        }
+                        li:hover{
+                            transform: rotate(50deg);
+
+                        }
+                        li:nth-child(1){
+                            background-color:rgb(68, 219, 65);
+
+                        }
+                        li:nth-child(2){
+                            background-color:rgb(65, 164, 219);
+
+                        }
+                        li:nth-child(3){
+                            background-color:orange;
+
+                        }
+                        li:nth-child(4){
+                            background-color:rgb(158, 9, 98);
+
+                        }
+                        li:nth-child(5){
+                            color: $colorSec;
+                            width: 25%;
+                            line-height: 2;
+
+                        }
+                        p{
+                            margin: 0;
+                            font-size:1.2rem;
+                        }
+                        a {
+
+                            text-decoration: none;
+                            color: black;
+                            vertical-align: sub;
+                        }
+
+                        a:hover {
+                            color: black;
+                        }
+                    }
+                }
+                .headerArticle{
+                    .carousel-caption{
+                        bottom: 50%;
+                    }
+                }
+            }
+        }
+
+    .main{
+        padding: 0 2%;
+        .aricle{
+            img{
+                max-width: 100%;
+            }
+        }
+
+        h2{
+            color: $colorPrima;
+            margin-top: 2rem;
+            margin-bottom: 0;
+            text-transform: uppercase;
+
+        }
+        .brTitle{
+            @include hrLigne($colorPrima);
+        }
+        .artColo1{
+            @include article(green);
+        }
+        .artColo2{
+            @include article(lightblue);
+        }
+        .artColo3{
+            @include article(orange);
+        }
+        .artRow{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    }
+}
+
+
+// ======================================================Media ==========================
+@media screen and (min-width: 550px) {
+    .containerMain {
+        #nav-ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+    }
+}
+//
+@media screen and (min-width: 720px){
+    .containerMain{
+
+        .artRow{
+            display: flex;
+            flex-direction: row;
+        }
+
+    }
+
+
+}

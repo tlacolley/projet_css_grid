@@ -1,0 +1,164 @@
+.containerMain {
+    background-color: white;
+
+    .littleAside {
+        background-color: red;
+    }
+
+    .mainSection {
+        background-color: green;
+
+        .headerTop {
+            background-color: pink;
+        }
+
+        .headerBottom {
+            display: grid;
+            background-color: lightblue;
+
+            .headerAside {
+                background-color: purple;
+            }
+
+            .mainHeader {
+                background-color: yellow;
+
+                .headerBannier {
+                    background-color: rgb(51, 208, 223);
+                }
+
+                .headerNav {
+                    ul {
+                        background-color: green;
+                    }
+                }
+
+                .headerArticle {
+                    background-color: blue;
+                }
+            }
+        }
+    }
+
+    .mainArticle {
+        .article1 {
+            background-color: blue;
+        }
+
+        .article2 {
+            background-color: lightgrey;
+        }
+
+        .article3 {
+            background-color: grey;
+        }
+
+        .article4 {
+            background-color: rgb(147, 43, 130);
+        }
+
+        .article5 {
+            background-color: grey;
+        }
+
+        .article6 {
+            background-color: lightgrey;
+        }
+    }
+
+    .secondSection {
+        background-color: yellow;
+
+        .Article1 {
+            background-color: lightgreen;
+        }
+
+        .articleSeconGrid {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            .echec1 {
+                background-color: black;
+                color: white;
+            }
+
+            .echec2 {
+                background-color: white;
+                color: black;
+            }
+
+            .echec3 {
+                background-color: black;
+                color: white;
+            }
+
+            .echec4 {
+                background-color: white;
+                color: black;
+            }
+
+            .echec5 {
+                background-color: black;
+                color: white;
+            }
+
+            .echec6 {
+                background-color: white;
+                color: black;
+            }
+
+            .echec7 {
+                background-color: black;
+                color: white;
+            }
+
+            .echec8 {
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+
+    .threeSection {
+        background-color: blue;
+
+        .div1section3 {
+            background-color: red;
+        }
+
+        .div2section3 {
+            background-color: green;
+        }
+
+        .div4section3 {
+            background-color: grey;
+
+            .pip {
+                border: solid 1px black;
+            }
+        }
+    }
+}
+
+// ======================================================Media ==========================
+
+@media screen and (min-width: 550px) {
+    .containerMain {
+        #nav-ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+@media screen and (min-width: 720px) {
+    .containerMain {
+        .mainSection {
+            .headerBottom {
+                background-color: blue;
+            }
+        }
+    }
+}

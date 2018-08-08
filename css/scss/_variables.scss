@@ -1,0 +1,34 @@
+// ==============================COLORS=================
+
+$colorPrima: red;
+$colorSec:rgb(80, 80, 80);
+$fontColPrima: grey;
+$fontColSec: white;
+
+
+
+
+// =========================Links a ==================
+a{
+    color: $fontColSec;
+
+
+}
+a:hover{
+    color: $fontColSec;
+}
+.btnLire{
+    color:$colorSec;
+}
+.btnLire:hover{
+    color:$colorSec;
+    text-decoration: underline;
+}
+
+// ========================List Ul Style=============
+
+ul{
+    list-style: none;
+    padding: 0;
+
+}

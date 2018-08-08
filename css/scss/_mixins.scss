@@ -1,0 +1,60 @@
+@mixin grid($col){
+    display: grid;
+    grid-template-columns: repeat($col, 1fr);
+}
+
+@mixin bgcolor($bg,$color){
+    background-color: $bg;
+    color: $color;
+
+}
+// @mixin themeArt($color){
+//     .colorArt{
+//         margin: 0;
+//         font-size: 1.7rem;
+//     color: $color;}
+//
+// }
+
+@mixin hrLigne($colo){
+
+
+        // font-size: 2rem;
+        text-align: left;
+        width: 2rem;
+        border: solid 2px $colo;
+        margin: 0;
+        margin-bottom: 1rem;
+
+}
+
+@mixin article($color){
+    .card{
+        // height: 100%;
+    .card-body{
+        padding: 0.7rem;
+        display: flex;
+        flex-direction: column;
+
+    }
+    h5{
+        margin: 0;
+        text-transform: uppercase;
+    }
+    .brArt{
+        @include hrLigne($color);
+    }
+    p{
+        font-size: 0.8rem;
+    }
+    .articleEnd{
+        display: flex;
+        justify-content: space-between;
+        .colorArt{
+            margin: 0;
+            color: $color;
+            font-size: 1.2rem;
+        }
+    }
+}
+}
