@@ -5,19 +5,44 @@
 .containerMain {
     width: 100%;
     max-width:100%;
-    .littleAside{
-        @include bgcolor($colorPrima,$fontColSec);
-        text-align: center;
-        ul{
-            li{
-                padding: 25% 0%;
+    .titleCollapse{
+        padding: 0;
+        display: inline-block;
 
+    }
+    .card-header{
+        padding: 0;
+    }
+    img{
+        max-width: 100%;
+    }
+    .asideRed{
+        background: $colorPrima;
+        display: flex;
+        justify-content: center;
+        .littleAside{
+            @include bgcolor($colorPrima,$fontColSec);
+            text-align: center;
+            position: fixed;
+            height: 100%;
+            z-index: 10;
+            width: auto;
+            margin: auto;
+            ul{
+                margin: auto;
+                width: 100%;
+                li{
+                    padding: 25% 0%;
+
+                }
             }
+
         }
 
     }
     .mainSection {
-        width: 80%;
+
+        width: 100%;
         max-width: 100%;
         box-sizing: border-box;
         .headerBottom {
@@ -125,6 +150,11 @@
 
     .main{
         padding: 0 2%;
+        .mainArticle{
+
+            margin-bottom: 5%;
+        }
+
         .aricle{
             img{
                 max-width: 100%;
@@ -153,6 +183,23 @@
         .artRow{
             display: flex;
             flex-direction: column;
+            height: 100%;
+        }
+        .btnDiv{
+            display: flex;
+            justify-content: end;
+            .btnLink{
+                border: solid 1px $fontColPrima;
+                color: $fontColPrima;
+                padding:2% 5%;
+                margin-top: 2%;
+                border-radius: 5px;
+            }
+            .btnLink:hover{
+                background-color: $fontColPrima;
+                color:white;
+                text-decoration: none;
+            }
         }
     }
     }
@@ -175,10 +222,22 @@
 //
 @media screen and (min-width: 720px){
     .containerMain{
+        .bigArt{
+            height: 100%;
+            .card-body{
+                position: relative;
+                .articleEnd{
+                    width: 90%;
+                    position:absolute;
+                    bottom: 0;
+                }
+            }
 
+        }
         .artRow{
             display: flex;
             flex-direction: row;
+
         }
 
     }
